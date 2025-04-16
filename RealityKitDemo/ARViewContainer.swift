@@ -34,18 +34,16 @@ struct ARViewContainer : UIViewRepresentable {
         guard let modelEntity = try? Entity.loadModel(named: modelName) else { return }
         
         switch modelName {
-            case "test":  // 替換成你的大型模型名稱
-                modelEntity.scale = SIMD3<Float>(0.1, 0.1, 0.1)  // 縮小到原來的 10%
-            case "Venus_Flytrap":  // 替換成你的另一個大型模型名稱
+            case "test":
+                modelEntity.scale = SIMD3<Float>(0.1, 0.1, 0.1)  // 10% size
+            case "Venus_Flytrap":
                 print("VF")
-
 
                 addGreenDotToModel(modelEntity)
 
             default:
-                // 預設縮放，如果需要的話
                 print("default")
-                modelEntity.scale = SIMD3<Float>(1, 1, 1)  // 保持原始大小
+                modelEntity.scale = SIMD3<Float>(1, 1, 1)  // keep the same size
         }
 
         anchorEntity.addChild(modelEntity)

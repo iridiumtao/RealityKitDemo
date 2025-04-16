@@ -8,9 +8,7 @@
 import SwiftUI
 
 struct SheetView: View {
-    // 1.
     @Binding var isPresented: Bool
-    // 2.
     @State var modelName: String = "Venus_Flytrap"
     
     var body: some View {
